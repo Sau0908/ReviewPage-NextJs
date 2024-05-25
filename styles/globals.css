@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255; /* Text color white for contrast */
+  --background-start-rgb: 0, 51, 102; /* Dark blue color */
+  --background-end-rgb: 0, 59, 102; /* Dark blue color */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255; /* Keep text color white for dark mode */
+    --background-start-rgb: 0, 0, 51; /* Darker blue color for dark mode */
+    --background-end-rgb: 0, 0, 51; /* Darker blue color for dark mode */
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
